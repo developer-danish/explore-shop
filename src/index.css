@@ -36,3 +36,8 @@
     min-width: 100px;
     /* color: #fff; */
 }
+
+span{
+    cursor: pointer;
+    color: blue;
+}

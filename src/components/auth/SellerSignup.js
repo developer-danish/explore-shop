@@ -5,7 +5,7 @@ import Row from "react-bootstrap/Row";
 import { MDBInput, MDBInputGroup } from "mdb-react-ui-kit";
 import { React } from "react";
 
-function SellerSignup() {
+function SellerSignup({handleLogin}) {
   return (
     <Form className=" w-100">
       <Row>
@@ -80,26 +80,26 @@ function SellerSignup() {
         <Col className="mt-3" >
         <div className="form-check form-check-inline ">
           <input
-            class="form-check-input"
+            className="form-check-input"
             type="radio"
             name="inlineRadioOptions"
             id="inlineRadio1"
             value="option1"
             />
-          <label class="form-check-label" for="inlineRadio1">
+          <label class="form-check-label" htmlFor="inlineRadio1">
             Male
           </label>
         </div>
 
         <div className="form-check form-check-inline">
           <input
-            class="form-check-input"
+            className="form-check-input"
             type="radio"
             name="inlineRadioOptions"
             id="inlineRadio2"
             value="option2"
             />
-          <label class="form-check-label" for="inlineRadio2">
+          <label className="form-check-label" htmlFor="inlineRadio2">
             Female
           </label>
         </div>
@@ -128,7 +128,7 @@ function SellerSignup() {
       <Row>
         <Col className="mt-3 d-flex align-items-center  ">
         <Button className="me-2" variant="primary">Register</Button>
-        <p className="m-0">Already have an account?</p>
+        <p className="m-0">Already have an account? <span onClick={handleLogin}>Login</span></p>
         </Col>
       </Row>
     </Form>
